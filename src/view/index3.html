@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    原型与原型链+原型prototype
+    执行上下文与执行上下文栈
+    作用域和作用域链
+    闭包
+    函数的propotype属性
+    每一个函数都有一个propotype属性，它默认指向一个空object空对象（即称为原型对象）
+    原型对象中有个constructor构造器，它指向构造函数
+    2.给原型对象添加属性（一般都是方法）
+    作用：函数的所有实例对象，自动拥有原型中的属性和方法。
+
+
+    原型链：访问一个对象的属性时，先在自身属性找，找到返回，如果没有，在沿着__proto__这条链向上查找，找到返回
+    如果最终没有找到，返回undefined
+    别名：隐性原型链
+    作用：查找对象的属性和方法
+    构造函数/原型/实例对象的关系！
+
+    <script>
+        console.log(Date.prototype)//object
+    </script>
+</body>
+</html>
