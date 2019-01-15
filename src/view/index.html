@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.基本类型（值）：string：任意的字符串
+        Number：任意的数字
+        boolean：true/false
+        undefined：undefined  null:null
+        对象（引用类型）:Object:任意对象 
+        function：一种特别的对象可以执行 
+        Array:一种特别的对象【有下标，内部数据是有序的】
+        2.判断
+        typeof  判断数据类型 undefined/数值
+        instanceof 判断对象的具体类型
+        === 可以判断undefined和null
+        面试题：
+        1.undefined 和null的区别
+        undefined 代表定义没有赋值
+        null代表定义了 有赋值为null
+        2.什么时候给变量赋值为null
+        确定对象赋值，初始化赋值  表明需要赋值为对象
+        结束时，让对象成为垃圾对象时  赋值null
+        3.严格区别变量类型和数据类型
+        数据类型：基本类型和对象类型
+        变量类型：基本类型和引用类型（保存的是地址值）
+
+
+        什么是数据？存储在内存中代表信息的东西，本质上时010101
+        什么是内存？内存条通电后产生可存储数据的空间，用来存储数据的。
+        什么是变量？可变化的量，由变量名和变量值组成，每个变量对应一小块内存。变量值就是内存中存储的数据。
+        内存，数据，变量三者之前的关系？
+        内存是用来存储数据的空间
+        变量是内存的标识
+        问题一：var a=xxx   a内存中保存的是什么？
+        1、xxx是基本数据，保存的就是数据
+        2.xxx是对象，保存的就是地址值
+        3.xxx是一个变量，内存中保存的是一个基本数据也可能使用地址值
+        问题二：关于引用变量赋值的问题
+        n个引用变量指向同一对象，通过变量修改对象中的内部数据，其它所有变量看到的是修改之后的数据
+        问题：在js调用函数时传递的是参数时，是值传递还是引用传递
+        是值传递
+        问题四：js引擎如何管理内存
+        1.内存生命周期
+            分配小内存空间，得到他的使用权
+            存储数据，可以仿佛操作
+            释放小内存空间
+        2.释放内存    
+     -->
+<script>
+    var a=1;
+    //函数中的a是值传递  不是上面申明的变量
+    function fn(a){
+        a=a+1;
+    }
+    fn(a);
+    console.log(a);
+</script>     
+</body>
+</html>
